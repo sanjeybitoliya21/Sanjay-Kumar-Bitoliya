@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sanjay Kumar Bitoliya | Official Website</title>
+    <title>Sanjay Kumar Bitoliya | Official</title>
     <!-- Font Awesome Icons Link -->
     <link rel="stylesheet" href="https://cloudflare.com">
     <!-- Google Fonts Link -->
@@ -14,131 +14,187 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Rajdhani', sans-serif;
         }
         body {
-            background: linear-gradient(135deg, #0f172a, #1e293b);
+            background: radial-gradient(circle at center, #1a103c 0%, #070410 100%);
             color: #ffffff;
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 20px;
+            overflow-x: hidden;
         }
+        /* Glowing Background Elements */
+        body::before, body::after {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: #8b5cf6;
+            filter: blur(150px);
+            opacity: 0.2;
+            z-index: 0;
+        }
+        body::before { top: 10%; left: 10%; background: #06b6d4; }
+        body::after { bottom: 10%; right: 10%; background: #d946ef; }
+
         .container {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 40px 30px;
-            border-radius: 20px;
+            position: relative;
+            z-index: 1;
+            background: rgba(15, 12, 30, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 50px 30px;
+            border-radius: 24px;
             width: 100%;
-            max-width: 450px;
+            max-width: 430px;
             text-align: center;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), 
+                        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+        .profile-container {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 25px;
         }
         .profile-img {
-            width: 110px;
-            height: 110px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
-            border: 3px solid #38bdf8;
-            margin-bottom: 15px;
             object-fit: cover;
-            box-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            padding: 5px;
+            background: rgba(255, 255, 255, 0.03);
+        }
+        .profile-container::after {
+            content: '';
+            position: absolute;
+            top: -5px; left: -5px; right: -5px; bottom: -5px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #00f2fe, #4facfe, #000);
+            z-index: -1;
+            animation: spin 6s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
         h1 {
-            font-size: 24px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 26px;
             font-weight: 700;
-            margin-bottom: 5px;
-            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            background: linear-gradient(to right, #00f2fe, #4facfe, #fff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 8px;
         }
         p.bio {
-            font-size: 14px;
-            color: #94a3b8;
-            margin-bottom: 30px;
+            font-size: 16px;
+            color: #a78bfa;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 35px;
         }
         .links-container {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 20px;
         }
         .link-card {
             display: flex;
             align-items: center;
-            justify-content: center;
-            gap: 12px;
-            padding: 14px;
-            border-radius: 12px;
+            justify-content: space-between;
+            padding: 16px 25px;
+            border-radius: 16px;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 16px;
-            transition: all 0.3s ease;
+            font-weight: 700;
+            font-size: 18px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
             color: #fff;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
         .link-card i {
-            font-size: 20px;
+            font-size: 22px;
         }
-        /* Button Colors & Hover Effects */
-        .youtube {
-            background: #e11d48;
+        .arrow-icon {
+            font-size: 14px !important;
+            opacity: 0.5;
+            transition: transform 0.3s ease;
         }
+        /* Neon Glow Effects on Hover */
         .youtube:hover {
-            background: #be123c;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 15px rgba(225, 29, 72, 0.4);
-        }
-        .instagram {
-            background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
+            background: rgba(255, 0, 85, 0.1);
+            border-color: #ff0055;
+            box-shadow: 0 0 25px rgba(255, 0, 85, 0.4);
+            text-shadow: 0 0 8px rgba(255, 0, 85, 0.6);
         }
         .instagram:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 15px rgba(238, 42, 123, 0.4);
-        }
-        .facebook {
-            background: #2563eb;
+            background: rgba(217, 70, 239, 0.1);
+            border-color: #d946ef;
+            box-shadow: 0 0 25px rgba(217, 70, 239, 0.4);
+            text-shadow: 0 0 8px rgba(217, 70, 239, 0.6);
         }
         .facebook:hover {
-            background: #1d4ed8;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 15px rgba(37, 99, 235, 0.4);
+            background: rgba(0, 242, 254, 0.1);
+            border-color: #00f2fe;
+            box-shadow: 0 0 25px rgba(0, 242, 254, 0.4);
+            text-shadow: 0 0 8px rgba(0, 242, 254, 0.6);
+        }
+        .link-card:hover .arrow-icon {
+            transform: translateX(5px);
+            opacity: 1;
         }
         .footer {
-            margin-top: 35px;
-            font-size: 12px;
-            color: #64748b;
+            margin-top: 40px;
+            font-size: 13px;
+            color: #6d6280;
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <!-- Default Profile Picture -->
-        <img src="myphoto.jpg" alt="Sanjay" class="profile-img" onerror="this.src='https://flaticon.com'">
+        <div class="profile-container">
+            <!-- Profile Picture -->
+            <img src="myphoto.jpg" alt="Sanjay" class="profile-img" onerror="this.src='https://flaticon.com'">
+        </div>
         
-        <h1>Sanjay Kumar Bitoliya</h1>
-        <p class="bio">Welcome to my official website! Connect with me below.</p>
+        <h1>Sanjay Kumar bitoliya</h1>
+        <p class="bio">Digital Creator</p>
 
         <div class="links-container">
-            <!-- 1. YouTube Button (Aapka Link Lag Chuka Hai) -->
-            <a href="https://www.youtube.com/@SanjayBitoliyaVlogs" target="_blank" class="link-card youtube">
-                <i class="fab fa-youtube"></i> Subscribe on YouTube
+            <!-- 1. YouTube Button -->
+            <a href="https://youtube.com" target="_blank" class="link-card youtube">
+                <span><i class="fab fa-youtube" style="color: #ff0055; margin-right: 12px;"></i> YouTube</span>
+                <i class="fas fa-chevron-right arrow-icon"></i>
             </a>
 
             <!-- 2. Instagram Button -->
-            <!-- Note: Aap bad me yahan bna link change kr skte hain -->
             <a href="https://instagram.com" target="_blank" class="link-card instagram">
-                <i class="fab fa-instagram"></i> Follow on Instagram
+                <span><i class="fab fa-instagram" style="color: #d946ef; margin-right: 12px;"></i> Instagram</span>
+                <i class="fas fa-chevron-right arrow-icon"></i>
             </a>
 
             <!-- 3. Facebook Button -->
-            <!-- Note: Aap bad me yahan bna link change kr skte hain -->
             <a href="https://facebook.com" target="_blank" class="link-card facebook">
-                <i class="fab fa-facebook"></i> Connect on Facebook
+                <span><i class="fab fa-facebook" style="color: #00f2fe; margin-right: 12px;"></i> Facebook</span>
+                <i class="fas fa-chevron-right arrow-icon"></i>
             </a>
         </div>
 
         <div class="footer">
-            © 2026 Designed by Sanjay
+            // CREATED BY SANJAY //
         </div>
     </div>
 
