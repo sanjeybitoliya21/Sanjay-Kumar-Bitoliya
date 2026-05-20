@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sanjay Kumar Bitoliya | Vlogger</title>
+    <title>Sanjay Kumar Bitoliya | Official Website</title>
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cloudflare.com">
     <!-- Google Fonts -->
@@ -17,160 +17,295 @@
             font-family: 'Plus Jakarta Sans', sans-serif;
         }
         body {
-            /* Aapki pasandida travel watercolor image ka background link */
+            /* वॉटरकलर ट्रैवल थीम बैकग्राउंड इमेज */
             background: url('https://unsplash.com') no-repeat center center fixed;
             background-size: cover;
             min-height: 100vh;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
+            flex-direction: column;
+            justify-content: space-between;
             position: relative;
         }
-        /* Background को थोड़ा सा डार्क शेड देने के लिए ताकि टेक्स्ट साफ दिखे */
+        /* हल्का सा डार्क ओवरले ताकि टेक्स्ट साफ दिखे */
         body::before {
             content: '';
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(1px);
+            background: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(2px);
             z-index: 0;
         }
 
-        .container {
+        /* --- 1. PREMIUM GLASS CONTAINER --- */
+        .main-wrapper {
             position: relative;
             z-index: 1;
-            /* White Premium Glass Effect */
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            padding: 40px 25px;
-            border-radius: 24px;
             width: 100%;
-            max-width: 400px;
-            text-align: center;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-            border: 1px solid rgba(255, 255, 255, 0.6);
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
         }
-        
+        .container {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(15px);
+            border-radius: 24px;
+            padding: 35px 25px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            text-align: center;
+        }
+
+        /* Profile Block */
+        .profile-section {
+            margin-bottom: 25px;
+        }
         .profile-img {
-            width: 100px;
-            height: 100px;
+            width: 110px;
+            height: 110px;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid #ffffff;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-            margin-bottom: 16px;
+            border: 4px solid #ffffff;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+            margin-bottom: 12px;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #0f172a;
+        }
+        p.subtitle {
+            font-size: 14px;
+            color: #64748b;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 4px;
         }
 
-        h1 {
-            font-size: 24px;
-            font-weight: 700;
-            color: #1e293b;
-            margin-bottom: 6px;
-        }
-        
-        p.bio {
-            font-size: 14px;
-            color: #475569;
-            margin-bottom: 30px;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-        }
-        
-        .links-container {
+        /* --- 2. SOCIAL MEDIA LOGOS --- */
+        .social-icons {
             display: flex;
-            flex-direction: column;
-            gap: 16px;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0 30px 0;
         }
-        
-        .link-card {
+        .social-icons a {
+            font-size: 24px;
+            width: 50px;
+            height: 50px;
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            padding: 15px 20px;
-            border-radius: 14px;
-            text-decoration: none;
+            justify-content: center;
+            border-radius: 50%;
+            color: #fff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        .social-icons a:hover {
+            transform: scale(1.15);
+        }
+        .yt-icon { background: linear-gradient(135deg, #ff4b2b, #ff416c); }
+        .insta-icon { background: linear-gradient(135deg, #8a2387, #e94057, #f27121); }
+        .fb-icon { background: linear-gradient(135deg, #0072ff, #00c6ff); }
+
+        /* --- 3. PROFESSIONAL NAVIGATION TABS --- */
+        .nav-tabs {
+            display: flex;
+            background: #f1f5f9;
+            padding: 6px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            border: 1px solid #e2e8f0;
+        }
+        .tab-btn {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            background: transparent;
             font-weight: 600;
-            font-size: 16px;
-            color: #ffffff;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            font-size: 14px;
+            color: #475569;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+        .tab-btn.active {
+            background: #ffffff;
+            color: #0f172a;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
         }
 
-        /* Travel Glow Colors for Buttons */
-        .youtube {
-            background: linear-gradient(135deg, #ff4b2b, #ff416c);
+        /* --- 4. TAB CONTENTS --- */
+        .tab-content {
+            display: none;
+            text-align: left;
+            animation: fadeIn 0.4s ease;
         }
-        .instagram {
-            background: linear-gradient(135deg, #8a2387, #e94057, #f27121);
+        .tab-content.active {
+            display: block;
         }
-        .facebook {
-            background: linear-gradient(135deg, #0072ff, #00c6ff);
-        }
-
-        /* Hover Animation */
-        .link-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
-            filter: brightness(1.05);
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        .link-card i {
-            font-size: 18px;
+        /* Home Content */
+        .post-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 16px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+        }
+        .post-card h3 { font-size: 16px; color: #0f172a; margin-bottom: 6px;}
+        .post-card p { font-size: 14px; color: #475569; line-height: 1.5; }
+
+        /* About & Contact Forms */
+        .about-text { font-size: 15px; color: #334155; line-height: 1.6; }
+        .form-group { margin-bottom: 15px; }
+        .form-group input, .form-group textarea {
+            width: 100%; padding: 12px; border: 1px solid #cbd5e1;
+            border-radius: 8px; background: #fff; font-size: 14px; outline: none;
+        }
+        .submit-btn {
+            width: 100%; padding: 12px; background: #0f172a; color: #fff;
+            border: none; border-radius: 8px; font-weight: 600; cursor: pointer;
         }
 
-        .arrow-icon {
-            font-size: 12px !important;
-            opacity: 0.8;
-            transition: transform 0.3s ease;
+        /* Photos Grid */
+        .photo-grid {
+            display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;
+        }
+        .photo-item {
+            width: 100%; aspect-ratio: 1; background: #e2e8f0; border-radius: 8px;
+            object-fit: cover; border: 2px solid #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
-        .link-card:hover .arrow-icon {
-            transform: translateX(4px);
+        /* --- 5. MOVING & BLINKING DISCLAIMER STICKER --- */
+        .sticker-marquee {
+            position: relative;
+            z-index: 1;
+            background: #ff0055;
+            color: #fff;
+            font-weight: 700;
+            font-size: 14px;
+            padding: 10px 0;
+            border-top: 2px solid #fff;
+            box-shadow: 0 -4px 10px rgba(0,0,0,0.15);
         }
-
-        .footer {
-            margin-top: 35px;
-            font-size: 12px;
-            color: #64748b;
-            font-weight: 500;
+        .blink-text {
+            animation: blinker 1.2s linear infinite;
+            color: #ffff00;
+            text-decoration: underline;
+            margin-left: 15px;
+        }
+        @keyframes blinker {
+            50% { opacity: 0; }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <!-- Avatar/Profile Picture -->
-        <img src="myphoto.jpg" alt="Sanjay" class="profile-img" onerror="this.src='https://flaticon.com'">
-        
-        <h1>Sanjay Kumar Bitoliya</h1>
-        <p class="bio">✈️ Travel & Lifestyle Vlogger 🗺️</p>
+    <div class="main-wrapper">
+        <div class="container">
+            
+            <!-- Profile Info -->
+            <div class="profile-section">
+                <!-- User Photo (ऑटोमैटिकली myphoto.jpg उठाएगा, न मिलने पर डिफॉल्ट आइकॉन दिखाएगा) -->
+                <img src="myphoto.jpg" alt="Sanjay Kumar Bitoliya" class="profile-img" onerror="this.src='https://flaticon.com'">
+                <h1>Sanjay Kumar Bitoliya</h1>
+                <p class="subtitle">✨ Digital Creator & Travel Vlogger ✨</p>
+            </div>
 
-        <div class="links-container">
-            <!-- 1. YouTube Button -->
-            <a href="https://youtube.com" target="_blank" class="link-card youtube">
-                <span><i class="fab fa-youtube" style="margin-right: 8px;"></i> YouTube Channel</span>
-                <i class="fas fa-chevron-right arrow-icon"></i>
-            </a>
+            <!-- Social Media Openable Logos -->
+            <div class="social-icons">
+                <a href="https://youtube.com" target="_blank" class="yt-icon" title="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://instagram.com" target="_blank" class="insta-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://facebook.com" target="_blank" class="fb-icon" title="Facebook"><i class="fab fa-facebook"></i></a>
+            </div>
 
-            <!-- 2. Instagram Button -->
-            <a href="https://instagram.com" target="_blank" class="link-card instagram">
-                <span><i class="fab fa-instagram" style="margin-right: 8px;"></i> Instagram</span>
-                <i class="fas fa-chevron-right arrow-icon"></i>
-            </a>
+            <!-- Tabs Navigation -->
+            <div class="nav-tabs">
+                <button class="tab-btn active" onclick="openTab(event, 'home')">Home</button>
+                <button class="tab-btn" onclick="openTab(event, 'about')">About</button>
+                <button class="tab-btn" onclick="openTab(event, 'photos')">Photos</button>
+                <button class="tab-btn" onclick="openTab(event, 'contact')">Contact</button>
+            </div>
 
-            <!-- 3. Facebook Button -->
-            <a href="https://facebook.com" target="_blank" class="link-card facebook">
-                <span><i class="fab fa-facebook" style="margin-right: 8px;"></i> Facebook</span>
-                <i class="fas fa-chevron-right arrow-icon"></i>
-            </a>
-        </div>
+            <!-- TAB 1: HOME (POSTS) -->
+            <div id="home" class="tab-content active">
+                <div class="post-card">
+                    <h3>🎬 Welcome to My World!</h3>
+                    <p>नमस्कार दोस्तों! मेरे ऑफिशियल ब्लॉग पेज पर आपका स्वागत है। यहाँ आपको मेरी यात्राओं, लाइफस्टाइल और नए व्लॉग्स के अपडेट्स मिलते रहेंगे।</p>
+                </div>
+                <div class="post-card">
+                    <h3>📌 Latest Update</h3>
+                    <p>नया धमाकेदार ट्रैवल व्लॉग मेरे यूट्यूब चैनल पर लाइव हो चुका है। ऊपर दिए गए यूट्यूब लोगो पर क्लिक करके अभी देखें!</p>
+                </div>
+            </div>
 
-        <div class="footer">
-            © 2026 | EXPLORE WITH SANJAY
+            <!-- TAB 2: ABOUT (OWNER INFO) -->
+            <div id="about" class="tab-content">
+                <div class="about-text">
+                    <p><strong>नाम:</strong> Sanjay Kumar Bitoliya</p><br>
+                    <p><strong>प्रोफाइल:</strong> कंटेंट क्रिएटर / व्लॉगर</p><br>
+                    <p><strong>जुनून:</strong> मुझे नई जगहों को एक्सप्लोर करना, नए लोगों से मिलना और खूबसूरत यादों को कैमरे में कैद करके आप सभी के साथ शेयर करना बहुत पसंद है।</p>
+                </div>
+            </div>
+
+            <!-- TAB 3: PHOTOS -->
+            <div id="photos" class="tab-content">
+                <div class="photo-grid">
+                    <!-- जब आप रिपोजिटरी में अपनी इमेजेस अपलोड करेंगे तो यहाँ नाम बदल सकते हैं -->
+                    <img src="photo1.jpg" class="photo-item" onerror="this.src='https://unsplash.com'" alt="Travel 1">
+                    <img src="photo2.jpg" class="photo-item" onerror="this.src='https://unsplash.com'" alt="Travel 2">
+                </div>
+            </div>
+
+            <!-- TAB 4: CONTACT -->
+            <div id="contact" class="tab-content">
+                <form onsubmit="event.preventDefault(); alert('Message sent successfully!');">
+                    <div class="form-group">
+                        <input type="text" placeholder="आपका नाम" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="ईमेल आईडी" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea rows="3" placeholder="आपका संदेश यहाँ लिखें..." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">संदेश भेजें</button>
+                </form>
+            </div>
+
         </div>
     </div>
+
+    <!-- CHALTI HUYI PATTI & BLINKING HYPERLINK DISCLAIMER -->
+    <div class="sticker-marquee">
+        <marquee behavior="scroll" direction="left" scrollamount="5">
+            📢 महत्वपूर्ण सूचना: संजय कुमार बिटोलिया के आधिकारिक पेज पर आपका स्वागत है। 
+            <a href="https://youtube.com" target="_blank" class="blink-text">👉 यहाँ क्लिक करके यूट्यूब चैनल सब्सक्राइब करें! 👈</a>
+            नवीनतम अपडेट्स के लिए सोशल मीडिया पर फॉलो करना न भूलें।
+        </marquee>
+    </div>
+
+    <!-- Tabs Logic Script -->
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
 
 </body>
 </html>
