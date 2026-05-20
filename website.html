@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanjay Kumar Bitoliya | Official World</title>
+    <!-- FontAwesome Icons for Social Media Logos -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            color: #f0f6fc;
+            overflow-x: hidden;
+            /* Ultra-Creative Animated Abstract Background */
+            background: linear-gradient(-45deg, #0f172a, #1e1b4b, #2e1065, #3b0764, #111827);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Floating Colorful Art & Drawing Stickers */
+        .sticker {
+            position: absolute;
+            font-size: 2.8rem;
+            animation: floatSticker 5s ease-in-out infinite;
+            z-index: 10;
+            filter: drop-shadow(0 0 15px rgba(255,255,255,0.3));
+            user-select: none;
+        }
+        @keyframes floatSticker {
+            0%, 100% { transform: translateY(0) rotate(0deg) scale(1); }
+            50% { transform: translateY(-20px) rotate(15deg) scale(1.1); }
+        }
+
+        .hero {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(8px);
+            padding: 120px 20px 80px 20px;
+            text-align: center;
+            position: relative;
+            border-bottom: 3px solid #ff007f;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .drawing-container {
+            width: 160px;
+            height: 160px;
+            margin: 0 auto 25px auto;
+            background: linear-gradient(45deg, #ff007f, #7928ca, #00dfd8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4.5rem;
+            box-shadow: 0 0 40px rgba(255, 0, 127, 0.7);
+            animation: pulse 3s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 40px rgba(255, 0, 127, 0.7); }
+            50% { box-shadow: 0 0 60px rgba(0, 223, 216, 0.9); }
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            color: #ffffff;
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px rgba(255,255,255,0.2);
+        }
+        .hero h1 span {
+            background: linear-gradient(to right, #00dfd8, #ff007f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .tagline {
+            font-size: 1.6rem;
+            color: #cbd5e1;
+            margin-bottom: 35px;
+            font-weight: 500;
+        }
+
+        /* Creative & Colorful Social Media Buttons */
+        .social-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 20px;
+        }
+        .social-icon {
+            font-size: 2.2rem;
+            width: 65px;
+            height: 65px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+        }
+        .youtube { background: #ff0000; }
+        .facebook { background: #1877f2; }
+        .instagram { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+        
+        .social-icon:hover {
+            transform: translateY(-8px) scale(1.15);
+            box-shadow: 0 10px 25px rgba(255,255,255,0.2);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+        .section-title {
+            font-size: 2.4rem;
+            color: #ffffff;
+            margin-bottom: 35px;
+            border-left: 6px solid #00dfd8;
+            padding-left: 15px;
+            text-shadow: 0 2px 10px rgba(0,223,216,0.3);
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 35px;
+            margin-bottom: 60px;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.4s ease;
+        }
+        .card:hover {
+            transform: translateY(-12px);
+            border-color: #ff007f;
+            box-shadow: 0 15px 30px rgba(255, 0, 127, 0.25);
+        }
+        .media-placeholder {
+            width: 100%;
+            height: 220px;
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+            border-radius: 14px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3.5rem;
+            border: 2px dashed #475569;
+        }
+        .contact-box {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            padding: 45px;
+            border-radius: 24px;
+            text-align: center;
+            border: 1px solid #00dfd8;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .email-link {
+            color: #00dfd8;
+            font-size: 1.6rem;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 20px;
+            transition: color 0.3s;
+        }
+        .email-link:hover {
+            color: #ff007f;
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #64748b;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            margin-top: 80px;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Creative Drawing & Colorful Stickers -->
+    <div class="sticker" style="top: 8%; left: 4%;">🎨</div>
+    <div class="sticker" style="top: 12%; right: 6%; animation-delay: 1s;">✨</div>
+    <div class="sticker" style="top: 35%; left: 6%; animation-delay: 2s;">🚀</div>
+    <div class="sticker" style="top: 60%; right: 5%; animation-delay: 1.5s;">📚</div>
+    <div class="sticker" style="top: 75%; left: 3%; animation-delay: 2.5s;">✍️</div>
+
+    <section class="hero">
+        <div class="drawing-container">🎨</div>
+        <h1>Sanjay Kumar <span>Bitoliya</span></h1>
+        <p class="tagline">Author | Creator | Artist</p>
+        
+        <!-- Social Media Buttons (Logos) -->
+        <div class="social-container">
+            <!-- Apni links lagane ke liye '#' ko apni profile URL se badlein -->
+            <a href="https://youtube.com" target="_blank" class="social-icon youtube" title="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://facebook.com" target="_blank" class="social-icon facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com" target="_blank" class="social-icon instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+    </section>
+
+    <div class="container">
+        
+        <h2 class="section-title">मेरी तस्वीरें (My Gallery)</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="media-placeholder">🖼️</div>
+                <h3>Official Profile</h3>
+                <p>Aapki sundar photo yahan aayegi</p>
+            </div>
+            <div class="card">
+                <div class="media-placeholder">📸</div>
+                <h3>Creative Moments</h3>
+                <p>Aapke lifestyle aur events ki photo</p>
+            </div>
+        </div>
+
+        <h2 class="section-title">मेरी किताबें (My Books)</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="media-placeholder">📖</div>
+                <h3>Book Title 1</h3>
+                <p>Is kitaab me aapko milegi meri likhi hui behtareen kahaniyan aur vichar.</p>
+            </div>
+            <div class="card">
+                <div class="media-placeholder">📘</div>
+                <h3>Book Title 2</h3>
+                <p>Digital duniya aur youth ke upar likhi gayi ek shaandar guide book.</p>
+            </div>
+        </div>
+
+        <h2 class="section-title">ताज़ा पोस्ट्स (My Recent Posts)</h2>
+        <div class="grid">
+            <div class="card" style="text-align: left;">
+                <span style="font-size: 2rem;">📝</span>
+                <h3 style="margin-top: 10px;">Post #1: Digital Revolution</h3>
+                <p style="color: #94a3b8; font-size: 0.95rem; margin-top: 5px;">Kaise internet ne aaj ke yuvaon ko ek nayi takat di hai...</p>
+            </div>
+            <div class="card" style="text-align: left;">
+                <span style="font-size: 2rem;">💡</span>
+                <h3 style="margin-top: 10px;">Post #2: Art & Creativity</h3>
+                <p style="color: #94a3b8; font-size: 0.95rem; margin-top: 5px;">Drawing aur writing ke zariye apne gusse ko art me kaise badlein...</p>
+            </div>
+        </div>
+
+        <div id="contact" class="contact-box">
+            <h2 style="color: #ffffff; margin-bottom: 10px;">मुझसे संपर्क करें (Contact Me)</h2>
+            <p>Kisi bhi business query, collab ya kitabon ki jankari ke liye mujhe email karein:</p>
+            <a href="mailto:Sanjeybitoliya21@gmail.com" class="email-link">📧 Sanjeybitoliya21@gmail.com</a>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 Sanjay Kumar Bitoliya. Made with ❤️ and High Creativity.</p>
+    </footer>
+
+</body>
+</html>
